@@ -1,10 +1,9 @@
 /*
-Theme Name: Twenty Twelve
+Theme Name: Hotel Esencia Suites
 Theme URI: http://wordpress.org/themes/twentytwelve
-Author: the WordPress team
-Author URI: http://wordpress.org/
-Description: The 2012 theme for WordPress is a fully responsive theme that looks great on any device. Features include a front page template with its own widgets, an optional display font, styling for post formats on both index and single views, and an optional no-sidebar page template. Make it yours with a custom menu, header image, and background.
-Version: 1.5
+Author: Daniel Pomalaza
+Author URI: http://behance.net/danielpomalaza/
+Description: Tema diseñado exlusivamente para Hotel esencia Suites
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: light, gray, white, one-column, two-columns, right-sidebar, fluid-layout, responsive-layout, custom-background, custom-header, custom-menu, editor-style, featured-images, flexible-header, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, theme-options, translation-ready
@@ -222,6 +221,8 @@ textarea {
 	overflow: auto;
 	vertical-align: top;
 }
+
+/******************************************************************************/
 
 /* Reset non-text input types */
 input[type="checkbox"],
@@ -1765,3 +1766,16 @@ img#wpstats {
 		margin-left: 3.57142857rem;
 	}
 }
+
+
+/******************************************************************************
+ESTILOS DEL TEMA***************************************************************
+******************************************************************************/
+
+body{
+    background: url(img/hotel-esencia-suites-fondotrama.png);
+}
+
+/******************************************************************************
+FIN DE ESTILOS DEL TEMA********************************************************
+******************************************************************************/

@@ -19,5 +19,6 @@
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
+    </div><!--wrapper-principal-->
 </body>
 </html>
