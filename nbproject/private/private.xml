@@ -5,11 +5,10 @@
         <group>
             <file>file:/D:/proys/hotel/wp-includes/option.php</file>
             <file>file:/D:/proys/hotel/wp-content/themes/hotel/page-templates/front-page.php</file>
+            <file>file:/D:/proys/hotel/wp-content/themes/hotel/js/general.js</file>
             <file>file:/D:/proys/hotel/wp-content/themes/hotel/style.less</file>
             <file>file:/D:/proys/hotel/wp-includes/class-wp-customize-control.php</file>
-            <file>file:/D:/proys/hotel/wp-includes/post-template.php</file>
             <file>file:/D:/proys/hotel/wp-content/themes/hotel/footer.php</file>
-            <file>file:/D:/proys/hotel/wp-content/themes/hotel/header.php</file>
             <file>file:/D:/proys/hotel/wp-content/themes/hotel/functions.php</file>
         </group>
     </open-files>

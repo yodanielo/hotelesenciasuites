@@ -22,6 +22,16 @@
  * @since Twenty Twelve 1.0
  */
 
+include 'inc/BFI_Thumb.php';
+$__resize_slider_home=array(
+    "width"=>561,
+    "height"=>347
+);
+$__resize_edificio_home=array(
+    "width"=>340,
+    "height"=>347
+);
+
 // Set up the content width value based on the theme's design and stylesheet.
 if ( ! isset( $content_width ) )
 	$content_width = 625;
@@ -153,6 +163,8 @@ function twentytwelve_scripts_styles() {
 	// Loads the Internet Explorer specific stylesheet.
 	wp_enqueue_style( 'twentytwelve-ie', get_template_directory_uri() . '/css/ie.css', array( 'twentytwelve-style' ), '20121010' );
 	$wp_styles->add_data( 'twentytwelve-ie', 'conditional', 'lt IE 9' );
+        
+        wp_enqueue_script("general", get_template_directory_uri() . "/js/general.js", array());
 }
 add_action( 'wp_enqueue_scripts', 'twentytwelve_scripts_styles' );
 

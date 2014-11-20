@@ -24,13 +24,13 @@ $line-height: 24;
 ---------- Examples
 
 * Use a pixel value with a rem fallback for font-size, padding, margins, etc.
-	padding: 5px 0;
-	padding: 0.357142857rem 0; (5 / $rembase)
+        padding: 5px 0;
+        padding: 0.357142857rem 0; (5 / $rembase)
 
 * Set a font-size and then set a line-height based on the font-size
-	font-size: 16px
-	font-size: 1.142857143rem; (16 / $rembase)
-	line-height: 1.5; ($line-height / 16)
+        font-size: 16px
+        font-size: 1.142857143rem; (16 / $rembase)
+        line-height: 1.5; ($line-height / 16)
 
 ---------- Vertical spacing
 
@@ -38,8 +38,8 @@ Vertical spacing between most elements should use 24px or 48px
 to maintain vertical rhythm:
 
 .my-new-div {
-	margin: 24px 0;
-	margin: 1.714285714rem 0; ( 24 / $rembase )
+        margin: 24px 0;
+        margin: 1.714285714rem 0; ( 24 / $rembase )
 }
 
 ---------- Further reading
@@ -321,6 +321,7 @@ body {
   border: none;
   margin: 0px;
   padding: 0px;
+  overflow: hidden;
 }
 #wrapper-principal {
   display: block;
@@ -328,6 +329,7 @@ body {
   background-attachment: fixed;
   clear: both;
   min-height: 500px;
+  overflow: auto;
 }
 .wrapper920 {
   display: block;
@@ -409,23 +411,23 @@ header#masthead .wrapper920 #telefono .grande {
   display: block;
   margin-top: 10px;
   /******************************************************************************
-Footer ************************************************************************
-******************************************************************************/
+    Footer ************************************************************************
+    ******************************************************************************/
 
   /******************************************************************************
-End Footer ********************************************************************
-******************************************************************************/
+    End Footer ********************************************************************
+    ******************************************************************************/
 
 }
 #page #main {
   display: block;
   /******************************************************************************
-Home **************************************************************************
-******************************************************************************/
+        Home **************************************************************************
+        ******************************************************************************/
 
   /******************************************************************************
-End Home **********************************************************************
-******************************************************************************/
+        End Home **********************************************************************
+        ******************************************************************************/
 
 }
 #page #main .slidercontent {
@@ -460,11 +462,65 @@ End Home **********************************************************************
   -moz-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.75);
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.75);
 }
+#page #main #cuerpohome-col1 {
+  float: left;
+  width: 50%;
+}
+#page #main #cuerpohome-col1 #innercuerpohome-col1 {
+  margin: 10px;
+}
+#page #main #cuerpohome-col2 {
+  float: left;
+  width: 30%;
+  text-align: center;
+}
+#page #main #cuerpohome-col2 img {
+  width: 191px;
+}
+#page #main #cuerpohome-col3 {
+  float: left;
+  width: 20%;
+  text-align: center;
+  padding-top: 50px;
+  font-weight: bold;
+}
+#page #main #cuerpohome-col3 #climalocal {
+  display: inline-block;
+}
 #page footer#colophon {
   background: #333333;
   -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.75);
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.75);
+  padding: 10px;
+  margin: 10px 0px 20px 0px;
+}
+#page footer#colophon #col1-menu,
+#page footer#colophon #col2-menu,
+#page footer#colophon #col3-menu,
+#page footer#colophon #col4-menu {
+  width: 25%;
+  float: left;
+  color: #f3f3f3;
+}
+#page footer#colophon #col1-menu a,
+#page footer#colophon #col2-menu a,
+#page footer#colophon #col3-menu a,
+#page footer#colophon #col4-menu a {
+  color: #f3f3f3;
+}
+#page footer#colophon #col4-menu {
+  text-align: center;
+}
+#page footer#colophon #col1-menu .menu-menu_primario-container {
+  padding: 20px 0px 20px 20px;
+}
+#page footer#colophon #col2-menu .menu-menu_secundario-container {
+  padding: 20px 0px 20px 0px;
+}
+#page footer#colophon #col3-menu,
+#page footer#colophon #col4-menu {
+  padding: 20px 0px 20px 0px;
 }
 /******************************************************************************
 FIN DE ESTILOS DEL TEMA********************************************************

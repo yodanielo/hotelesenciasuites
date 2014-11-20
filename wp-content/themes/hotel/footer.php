@@ -25,11 +25,12 @@
                 <?php wp_nav_menu(array('theme_location' => 'secondary')); ?>
             </div>
             <div id="col3-menu">
-                <img src="<?=$imagenlogo?>" alt="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>" />
+                <?= str_replace("\n", "<br/>", $direccion)?>
             </div>
             <div id="col4-menu" class="site-info">
-                <?= str_replace("\n", "<br/>", $direccion)?>
+                <img src="<?=$imagenlogo?>" alt="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>" width="90" />
             </div><!-- .site-info -->
+            <div style="clear:both;"></div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 

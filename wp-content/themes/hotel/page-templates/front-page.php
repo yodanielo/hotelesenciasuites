@@ -42,7 +42,8 @@ while (have_posts()) : the_post();
         <ul class="sliderul">
             <?php
             foreach ($VSlider as $key => $imgSlider) {
-                echo '<li><img src="' . $imgSlider . '" alt=""/></li>';
+                $image=bfi_thumb( $imgSlider, $__resize_slider_home );
+                echo '<li><img src="' . $image . '" alt=""/></li>';
             }
             ?>
         </ul>
@@ -50,14 +51,38 @@ while (have_posts()) : the_post();
     <div class="edificiocontent">
         <ul class="edificioul">
             <?php
-            foreach ($VSlider as $key => $imgSlider) {
-                echo '<li><img src="' . $imgSlider . '" alt=""/></li>';
+            foreach ($VEdificio as $key => $imgSlider) {
+                $image=bfi_thumb( $imgSlider, $__resize_edificio_home );
+                echo '<li><img src="' . $image . '" alt=""/></li>';
             }
             ?>
         </ul>
     </div>
     <div class="fondoblanco" id="maincontent">
-        <?= $post->post_content ?>
+        <div id="cuadroreserva">
+            <!--<script type="text/javascript" src="http://openhotel.com/apps/hotel.cfm?key=TTlbIjo2ODo7JDoqOiBMKCJXSFMiQUsmOUhGKTJbOi4lTVlZLyVfUUdMP1ooXF0qTFpNO0hDPT4iQFtYOAozRkVJSyA4JClVTS8uIzwvIzNVSU9SL1g9UFAgIAo_EQUAL_"></script>-->
+        </div>
+        <div id="cuerpohome-col1">
+            <div id="innercuerpohome-col1">
+            <?= $post->post_content ?>
+            </div>
+        </div>
+        <div id="cuerpohome-col2">
+            <?php
+                $imagenlogo=get_option("twentytwelve_theme_options");
+                $imagenlogo=$imagenlogo["image_logo_footer"];
+            ?>
+            <img src="<?=$imagenlogo?>" alt="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>" />
+        </div>
+        <div id="cuerpohome-col3">
+            <div id="climalocal">
+                <!-- www.TuTiempo.net - Ancho:110px - Alto:50px -->
+                <div id="TT_RiB1Ek111jfcd7hA1AqjDjDDz9n1MAEFrdEtkci5qEj"><a href="http://www.tutiempo.net">El tiempo 15 días</a></div>
+                <script type="text/javascript" src="http://www.tutiempo.net/widget/eltiempo_RiB1Ek111jfcd7hA1AqjDjDDz9n1MAEFrdEtkci5qEj"></script>
+            </div>
+            <div id="horalocal"></div>
+        </div>
+        <div style="clear:both;"></div>
     </div>
     <?php
 //print_r($post->post_content);
@@ -69,10 +94,13 @@ endwhile; // end of the loop.
             settings={
                 randomStart:true,
                 adaptiveHeight:true,
-                controls:false
+                controls:false,
+                auto:true
             };
             $('.sliderul').bxSlider(settings);
             $('.edificioul').bxSlider(settings);
+            //----------------------------------------
+            $("#horalocal").horaMundial(-5, "");
         });
     });
 </script>
