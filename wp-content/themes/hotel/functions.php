@@ -60,8 +60,9 @@ function twentytwelve_setup() {
 	// This theme supports a variety of post formats.
 	add_theme_support( 'post-formats', array( 'aside', 'image', 'link', 'quote', 'status' ) );
 
-	// This theme uses wp_nav_menu() in one location.
+        // This theme uses wp_nav_menu() in one location.
 	register_nav_menu( 'primary', __( 'Primary Menu', 'twentytwelve' ) );
+	register_nav_menu( 'secondary', __( 'Secondary Menu', 'twentytwelve' ) );
 
 	/*
 	 * This theme supports custom background color and image,
@@ -457,6 +458,44 @@ function twentytwelve_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
+        
+        
+        
+        
+        $wp_customize->add_section("twentytwelve_Settings", array(
+            "title"=>"Hotel Esencia Suites",
+            "priority"=>1,
+        ));
+        /**********************************************************************/
+        /*Dirección ***********************************************************/
+        /**********************************************************************/
+        $wp_customize->add_setting('twentytwelve_theme_options[text_direccion]', array(
+            'default'        => '',
+            'capability'     => 'edit_theme_options',
+
+        ));
+
+        $wp_customize->add_control('twentytwelve_text_direccion', array(
+            'label'      => __('Dirección', 'themename'),
+            'section'    => 'twentytwelve_Settings',
+            'settings'   => 'twentytwelve_theme_options[text_direccion]',
+            'type'    => 'textarea',
+        ));
+        /**********************************************************************/
+        /*Footer Image ********************************************************/
+        /**********************************************************************/
+        $wp_customize->add_setting('twentytwelve_theme_options[image_logo_footer]', array(
+            'default'           => '',
+            'capability'        => 'edit_theme_options',
+            'type'           => 'option',
+
+        ));
+
+        $wp_customize->add_control( new WP_Customize_Image_Control($wp_customize, 'twentytwelve_image_logo_footer', array(
+            'label'    => __('Logo del Footer', 'themename'),
+            'section'  => 'twentytwelve_Settings',
+            'settings' => 'twentytwelve_theme_options[image_logo_footer]',
+        )));
 }
 add_action( 'customize_register', 'twentytwelve_customize_register' );
 
