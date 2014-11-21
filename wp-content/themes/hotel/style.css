@@ -487,6 +487,26 @@ header#masthead .wrapper920 #telefono .grande {
 #page #main #cuerpohome-col3 #climalocal {
   display: inline-block;
 }
+@media (max-width: 767px) {
+  #page #main .slidercontent,
+  #page #main .edificiocontent {
+    width: 100%;
+  }
+  #page #main #contsliders {
+    display: block;
+    margin: 0px 10px;
+  }
+  #page #main .fondoblanco {
+    margin: 10px;
+  }
+  #page #main #cuerpohome-col1,
+  #page #main #cuerpohome-col2,
+  #page #main #cuerpohome-col3 {
+    float: none;
+    clear: both;
+    width: auto;
+  }
+}
 #page footer#colophon {
   background: #333333;
   -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.75);
@@ -521,6 +541,28 @@ header#masthead .wrapper920 #telefono .grande {
 #page footer#colophon #col3-menu,
 #page footer#colophon #col4-menu {
   padding: 20px 0px 20px 0px;
+}
+@media (max-width: 767px) {
+  #page #colophon {
+    margin: 10px 10px 20px 10px!important;
+  }
+  #page #col1-menu,
+  #page #col2-menu .menu-menu_secundario-container,
+  #page #col1-menu .menu-menu_primario-container,
+  #page #col2-menu,
+  #page #col3-menu,
+  #page #col4-menu {
+    margin: 15px 0px!important;
+    padding: 0px!important;
+    width: auto!important;
+    float: none!important;
+    text-align: center;
+    clear: both!important;
+    display: block;
+  }
+  #page #colophon a {
+    text-decoration: underline;
+  }
 }
 /******************************************************************************
 FIN DE ESTILOS DEL TEMA********************************************************

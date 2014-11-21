@@ -38,6 +38,7 @@ while (have_posts()) : the_post();
     if(array_search("edificio", $keys))
         $VEdificio = array_map('trim', get_post_custom_values("edificio"));
     ?>
+<div id="contsliders">
     <div class="slidercontent">
         <ul class="sliderul">
             <?php
@@ -58,6 +59,7 @@ while (have_posts()) : the_post();
             ?>
         </ul>
     </div>
+</div>
     <div class="fondoblanco" id="maincontent">
         <div id="cuadroreserva">
             <!--<script type="text/javascript" src="http://openhotel.com/apps/hotel.cfm?key=TTlbIjo2ODo7JDoqOiBMKCJXSFMiQUsmOUhGKTJbOi4lTVlZLyVfUUdMP1ooXF0qTFpNO0hDPT4iQFtYOAozRkVJSyA4JClVTS8uIzwvIzNVSU9SL1g9UFAgIAo_EQUAL_"></script>-->
