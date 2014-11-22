@@ -49,7 +49,7 @@
                     </div>
                 </div>
 
-                <nav id="site-navigation-mobile" class="main-navigation visible-xs-block" role="navigation" style="height:0px;" aria-expanded="false">
+                <nav id="site-navigation-mobile" class="main-navigation visible-xs-block collapse" role="navigation" style="height:0px;" aria-expanded="false">
                     <div class="wrapper920">
                         <!--<button class="menu-toggle"><?php _e('Menu', 'twentytwelve'); ?></button>-->
                         <?php wp_nav_menu(array('theme_location' => 'primary', 'menu_class' => 'nav-menu nav navbar-nav')); ?>

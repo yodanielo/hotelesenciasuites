@@ -404,6 +404,105 @@ header#masthead{
         /******************************************************************************
         End Home **********************************************************************
         ******************************************************************************/
+
+        /******************************************************************************
+        Begin Habitaciones ************************************************************
+        ******************************************************************************/
+
+        #col1-habs {
+            float: left;
+            width: 25%;
+            .cont_thumb_hab {
+                width: 50%;
+                float: left;
+                &.active .background-thumb_hab{
+                    .opacity(0);
+                }
+                .cont_thumb_hab_int {
+                    background: #ccc;
+                    margin: 0px 10px 10px 0px;
+                    .drop-shadow(5px, 5px, 5px, 0.75);
+                    position:relative;
+                    cursor:pointer;
+                    img{
+                        width:100%;
+                        float:left;
+                    }
+                    .background-thumb_hab{
+                        position:absolute;
+                        left:0px;
+                        top:0px;
+                        width:100%;
+                        height: 100%;
+                        .bw-rgba(0,0,0,0.3);
+                        text-align: center;
+                        color:#ffffff;
+                        font-size: 1em;
+                        padding: 10px;
+
+                        -webkit-transition: opacity 0.3s ease-in-out;
+                        -moz-transition: opacity 0.3s ease-in-out;
+                        transition: opacity 0.3s ease-in-out;
+                        &:hover{
+                            .opacity(0);
+                        }
+                    }
+                }
+            }
+        }
+
+        #col2-arts{
+            float:right;
+            width:75%;
+            .col2-1-fotos {
+                margin-bottom: 10px;
+                .drop-shadow(5px, 5px, 5px, 0.75);
+            }
+            .col2-1-texto{
+                margin-bottom: 10px;
+                h2{
+                    font-size: 18px;
+                    font-weight: bold;
+                    text-align: left;
+                    line-height: 25px;
+                }
+            }
+            .cont_hab{
+                display:none;
+            }
+        }
+        #col2-1-reserva{
+            margin: 10px 10px 0px 10px;
+        }
+
+        @media (max-width:767px){
+            #col1-habs{
+                float: none!important;
+                width: auto;
+                overflow: hidden;
+                margin: 0px 0px 0px 10px;
+                .cont_thumb_hab {
+                    width: 25%!important;
+                    width:auto;
+                    .cont_thumb_hab_int{
+                        .background-thumb_hab span{
+                            display:none;
+                        }
+                    }
+                }
+            }
+            #col2-arts{
+                float: none!important;
+                width: auto!important;
+                .col2-1-fotos {
+                    margin: 0px 10px;
+                }
+            }
+        }
+
+        /******************************************************************************
+        End Habitaciones **************************************************************
+        ******************************************************************************/
     }
     /******************************************************************************
     Footer ************************************************************************

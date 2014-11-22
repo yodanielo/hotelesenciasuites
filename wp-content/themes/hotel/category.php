@@ -10,42 +10,31 @@
  * @subpackage Twenty_Twelve
  * @since Twenty Twelve 1.0
  */
+wp_enqueue_style("bxslider", get_template_directory_uri() . "/package/jquery.bxslider/jquery.bxslider.css", array());
+wp_enqueue_script("bxslider", get_template_directory_uri() . "/package/jquery.bxslider/jquery.bxslider.min.js", array());
 
-get_header(); ?>
+get_header(); 
 
-	<section id="primary" class="site-content">
-		<div id="content" role="main">
+    global $current_blog;
+    $cat = get_query_var('cat');
+    if($current_blog->blog_id==1){
+        switch ($cat){
+            case 3://habitaciones
+                include 'categoria-habitaciones.php';
+                break;
+            default:
+                include 'categoria-general.php';
+        }
+    }
+    else{
+        switch ($cat){
+            case 3://rooms
+                include 'categoria-habitaciones.php';
+                break;
+            default:
+                include 'categoria-general.php';
+        }
+    }
 
-		<?php if ( have_posts() ) : ?>
-			<header class="archive-header">
-				<h1 class="archive-title"><?php printf( __( 'Category Archives: %s', 'twentytwelve' ), '<span>' . single_cat_title( '', false ) . '</span>' ); ?></h1>
-
-			<?php if ( category_description() ) : // Show an optional category description ?>
-				<div class="archive-meta"><?php echo category_description(); ?></div>
-			<?php endif; ?>
-			</header><!-- .archive-header -->
-
-			<?php
-			/* Start the Loop */
-			while ( have_posts() ) : the_post();
-
-				/* Include the post format-specific template for the content. If you want to
-				 * this in a child theme then include a file called called content-___.php
-				 * (where ___ is the post format) and that will be used instead.
-				 */
-				get_template_part( 'content', get_post_format() );
-
-			endwhile;
-
-			twentytwelve_content_nav( 'nav-below' );
-			?>
-
-		<?php else : ?>
-			<?php get_template_part( 'content', 'none' ); ?>
-		<?php endif; ?>
-
-		</div><!-- #content -->
-	</section><!-- #primary -->
-
-<?php get_sidebar(); ?>
+get_sidebar(); ?>
 <?php get_footer(); ?>

@@ -31,6 +31,14 @@ $__resize_edificio_home=array(
     "width"=>340,
     "height"=>347
 );
+$__resize_thumb_habitaciones=array(
+    "width"=>108,
+    "height"=>108
+);
+$__resize_big_habitaciones=array(
+    "width"=>690,
+    "height"=>421
+);
 
 // Set up the content width value based on the theme's design and stylesheet.
 if ( ! isset( $content_width ) )

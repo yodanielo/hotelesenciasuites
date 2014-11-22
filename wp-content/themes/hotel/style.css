@@ -429,6 +429,14 @@ header#masthead .wrapper920 #telefono .grande {
         End Home **********************************************************************
         ******************************************************************************/
 
+  /******************************************************************************
+        Begin Habitaciones ************************************************************
+        ******************************************************************************/
+
+  /******************************************************************************
+        End Habitaciones **************************************************************
+        ******************************************************************************/
+
 }
 #page #main .slidercontent {
   float: left;
@@ -505,6 +513,108 @@ header#masthead .wrapper920 #telefono .grande {
     float: none;
     clear: both;
     width: auto;
+  }
+}
+#page #main #col1-habs {
+  float: left;
+  width: 25%;
+}
+#page #main #col1-habs .cont_thumb_hab {
+  width: 50%;
+  float: left;
+}
+#page #main #col1-habs .cont_thumb_hab.active .background-thumb_hab {
+  -moz-opacity: 0;
+  -khtml-opacity: 0;
+  -webkit-opacity: 0;
+  opacity: 0;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0);
+  filter: alpha(opacity=0);
+}
+#page #main #col1-habs .cont_thumb_hab .cont_thumb_hab_int {
+  background: #cccccc;
+  margin: 0px 10px 10px 0px;
+  -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.75);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.75);
+  position: relative;
+  cursor: pointer;
+}
+#page #main #col1-habs .cont_thumb_hab .cont_thumb_hab_int img {
+  width: 100%;
+  float: left;
+}
+#page #main #col1-habs .cont_thumb_hab .cont_thumb_hab_int .background-thumb_hab {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.3);
+  /*color: rgba(@r,@g,@b,@a);*/
+
+  text-align: center;
+  color: white;
+  font-size: 1em;
+  padding: 10px;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  -moz-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+}
+#page #main #col1-habs .cont_thumb_hab .cont_thumb_hab_int .background-thumb_hab:hover {
+  -moz-opacity: 0;
+  -khtml-opacity: 0;
+  -webkit-opacity: 0;
+  opacity: 0;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0);
+  filter: alpha(opacity=0);
+}
+#page #main #col2-arts {
+  float: right;
+  width: 75%;
+}
+#page #main #col2-arts .col2-1-fotos {
+  margin-bottom: 10px;
+  -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.75);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.75);
+}
+#page #main #col2-arts .col2-1-texto {
+  margin-bottom: 10px;
+}
+#page #main #col2-arts .col2-1-texto h2 {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: left;
+  line-height: 25px;
+}
+#page #main #col2-arts .cont_hab {
+  display: none;
+}
+#page #main #col2-1-reserva {
+  margin: 10px 10px 0px 10px;
+}
+@media (max-width: 767px) {
+  #page #main #col1-habs {
+    float: none!important;
+    width: auto;
+    overflow: hidden;
+    margin: 0px 0px 0px 10px;
+  }
+  #page #main #col1-habs .cont_thumb_hab {
+    width: 25%!important;
+    width: auto;
+  }
+  #page #main #col1-habs .cont_thumb_hab .cont_thumb_hab_int .background-thumb_hab span {
+    display: none;
+  }
+  #page #main #col2-arts {
+    float: none!important;
+    width: auto!important;
+  }
+  #page #main #col2-arts .col2-1-fotos {
+    margin: 0px 10px;
   }
 }
 #page footer#colophon {
