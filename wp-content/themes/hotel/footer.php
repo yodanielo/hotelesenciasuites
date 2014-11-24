@@ -18,7 +18,7 @@
         $imagenlogo=$imagenlogo["image_logo_footer"];
         ?>
 	<footer id="colophon" role="contentinfo">
-            <div id="col1-menu">
+            <div id="col1-menu" class="hidden-xs">
                 <?php wp_nav_menu(array('theme_location' => 'primary')); ?>
             </div>
             <div id="col2-menu">

@@ -14,3 +14,8 @@ wp-content/wp-cache-config.php
 nbproject/
 wp-admin/
 
+
+nbproject/private/config.properties
+nbproject/private/configs/pruebas.properties
+nbproject/private/private.xml
+nbproject/project.properties

@@ -502,6 +502,21 @@ function twentytwelve_customize_register( $wp_customize ) {
             'type'    => 'textarea',
         ));
         /**********************************************************************/
+        /*Dirección Maps*******************************************************/
+        /**********************************************************************/
+        $wp_customize->add_setting('twentytwelve_theme_options[text_direccion_maps]', array(
+            'default'        => '',
+            'capability'     => 'edit_theme_options',
+
+        ));
+
+        $wp_customize->add_control('twentytwelve_text_direccion_maps', array(
+            'label'      => __('Dirección de Google Maps', 'themename'),
+            'section'    => 'twentytwelve_Settings',
+            'settings'   => 'twentytwelve_theme_options[text_direccion_maps]',
+            'type'    => 'text',
+        ));
+        /**********************************************************************/
         /*Footer Image ********************************************************/
         /**********************************************************************/
         $wp_customize->add_setting('twentytwelve_theme_options[image_logo_footer]', array(

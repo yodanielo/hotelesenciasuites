@@ -29,52 +29,53 @@ while (have_posts()) : the_post();
     //edificio
     //contenido
     //reserva
-    $keys=get_post_custom_keys();
-    $VSlider=array(); 
-    $VEdificio=array();
-            
-    if(array_search("slider", $keys))
+    $keys = get_post_custom_keys();
+    $VSlider = array();
+    $VEdificio = array();
+
+    if (array_search("slider", $keys))
         $VSlider = array_map('trim', get_post_custom_values("slider"));
-    if(array_search("edificio", $keys))
-        $VEdificio = array_map('trim', get_post_custom_values("edificio"));
     ?>
-<div id="contsliders">
-    <div class="slidercontent">
-        <ul class="sliderul">
-            <?php
-            foreach ($VSlider as $key => $imgSlider) {
-                $image=bfi_thumb( $imgSlider, $__resize_slider_home );
+    <div id="contsliders">
+        <div class="slidercontent">
+            <ul class="sliderul">
+                <?php
+                foreach ($VSlider as $key => $imgSlider) {
+                    $image = bfi_thumb($imgSlider, $__resize_slider_home);
+                    echo '<li><img src="' . $image . '" alt=""/></li>';
+                }
+                ?>
+            </ul>
+        </div>
+        <div class="edificiocontent">
+            <ul class="edificioul">
+                <?php
+                $thumb_id = get_post_thumbnail_id($post->ID);
+                $thumb_url = wp_get_attachment_image_src($thumb_id, "medium", true);
+                $image = bfi_thumb($thumb_url[0], $__resize_edificio_home);
+//            foreach ($VEdificio as $key => $imgSlider) {
+//                $image=bfi_thumb( $imgSlider, $__resize_edificio_home );
                 echo '<li><img src="' . $image . '" alt=""/></li>';
-            }
-            ?>
-        </ul>
+//            }
+                ?>
+            </ul>
+        </div>
     </div>
-    <div class="edificiocontent">
-        <ul class="edificioul">
-            <?php
-            foreach ($VEdificio as $key => $imgSlider) {
-                $image=bfi_thumb( $imgSlider, $__resize_edificio_home );
-                echo '<li><img src="' . $image . '" alt=""/></li>';
-            }
-            ?>
-        </ul>
-    </div>
-</div>
     <div class="fondoblanco" id="maincontent">
         <div id="cuadroreserva">
             <script type="text/javascript" src="http://openhotel.com/apps/hotel.cfm?key=TTlbIjo2ODo7JDoqOiBMKCJXSFMiQUsmOUhGKTJbOi4lTVlZLyVfUUdMP1ooXF0qTFpNO0hDPT4iQFtYOAozRkVJSyA4JClVTS8uIzwvIzNVSU9SL1g9UFAgIAo_EQUAL_"></script>
         </div>
         <div id="cuerpohome-col1">
             <div id="innercuerpohome-col1">
-            <?= $post->post_content ?>
+                <?= $post->post_content ?>
             </div>
         </div>
         <div id="cuerpohome-col2">
             <?php
-                $imagenlogo=get_option("twentytwelve_theme_options");
-                $imagenlogo=$imagenlogo["image_logo_footer"];
+            $imagenlogo = get_option("twentytwelve_theme_options");
+            $imagenlogo = $imagenlogo["image_logo_footer"];
             ?>
-            <img src="<?=$imagenlogo?>" alt="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>" />
+            <img src="<?= $imagenlogo ?>" alt="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>" />
         </div>
         <div id="cuerpohome-col3">
             <div id="climalocal">
@@ -91,16 +92,16 @@ while (have_posts()) : the_post();
 endwhile; // end of the loop. 
 ?>
 <script type="text/javascript">
-    $(function () {
-        $(document).ready(function () {
-            settings={
-                randomStart:true,
-                adaptiveHeight:true,
-                controls:false,
-                auto:true
+    $(function() {
+        $(document).ready(function() {
+            settings = {
+                randomStart: true,
+                adaptiveHeight: true,
+                controls: false,
+                auto: true
             };
             $('.sliderul').bxSlider(settings);
-            $('.edificioul').bxSlider(settings);
+            //$('.edificioul').bxSlider(settings);
             //----------------------------------------
             $("#horalocal").horaMundial(-5, "");
         });

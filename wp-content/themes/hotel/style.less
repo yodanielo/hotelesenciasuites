@@ -54,7 +54,8 @@ http://blog.typekit.com/2011/11/09/type-study-sizing-the-legible-letter/
 @imgpath:"img";
 
 
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+html, body img/*, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video */
+{
     margin: 0;
     padding: 0;
     border: 0;
@@ -101,6 +102,13 @@ h4,
 h5,
 h6 {
     clear: both;
+}
+h2{
+    font-size: 18px;
+    font-weight: bold;
+    text-align: left;
+    line-height: 25px;
+    margin: 10px 0px;
 }
 html {
     overflow-y: scroll;
@@ -256,11 +264,28 @@ body{
     max-width: 920px;
     overflow:hidden;
 }
+#contsliders,
+footer{
+    li,ul,ol{
+        padding: 0px;
+    }
+}
+#site-navigation,
+#site-navigation-mobile
+{
+    .current-menu-item,
+    .current-page,
+    .current_page_item{
+        text-decoration: none;
+        background-color: #eee;
+    }
+}
 header#masthead{
     .bw-rgba(255,255,255,0.6);
     line-height: 100px;
     display:block;
     min-height: 100px;
+
     .wrapper920{
         text-align:right;
         line-height:100px;
@@ -344,7 +369,8 @@ header#masthead{
             .drop-shadow(5px, 5px, 5px, 0.75);
             margin-bottom: 10px;
             img{
-                max-height: 347px;
+                float:left;
+                width:100%;
             }
         }
         .fondoblanco{
@@ -385,6 +411,9 @@ header#masthead{
             .slidercontent,
             .edificiocontent{
                 width:100%;
+            }
+            div#generalcontent {
+                margin: 0px 0px 10px 0px!important;
             }
             #contsliders{
                 display:block;
@@ -460,12 +489,6 @@ header#masthead{
             }
             .col2-1-texto{
                 margin-bottom: 10px;
-                h2{
-                    font-size: 18px;
-                    font-weight: bold;
-                    text-align: left;
-                    line-height: 25px;
-                }
             }
             .cont_hab{
                 display:none;
@@ -502,6 +525,41 @@ header#masthead{
 
         /******************************************************************************
         End Habitaciones **************************************************************
+        ******************************************************************************/
+
+        /******************************************************************************
+        Maps **************************************************************************
+        ******************************************************************************/
+        #mapscontent{
+            float:left;
+            width: 61%;
+            .drop-shadow(5px, 5px, 5px, 0.75);
+            margin-bottom: 10px;
+            position:relative;
+            img{
+                float:left;
+                width:100%;
+            }
+            #embedmaps{
+                position:absolute;
+                top:0px;
+                left:0px;
+                width:100%;
+                height:100%;
+            }
+        }
+
+        @media (max-width:767px){
+            #mapscontent{
+                width:100%;
+            }
+            #contsliders{
+                display:block;
+                margin:0px 10px;
+            }
+        }
+        /******************************************************************************
+        End Maps **********************************************************************
         ******************************************************************************/
     }
     /******************************************************************************

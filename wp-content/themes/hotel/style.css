@@ -58,86 +58,7 @@ http://blog.typekit.com/2011/11/09/type-study-sizing-the-legible-letter/
     More info at: http://lesselements.com
   ---------------------------------------------------*/
 html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
+body img/*, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video */ {
   margin: 0;
   padding: 0;
   border: 0;
@@ -184,6 +105,13 @@ h4,
 h5,
 h6 {
   clear: both;
+}
+h2 {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: left;
+  line-height: 25px;
+  margin: 10px 0px;
 }
 html {
   overflow-y: scroll;
@@ -337,6 +265,23 @@ body {
   max-width: 920px;
   overflow: hidden;
 }
+#contsliders li,
+footer li,
+#contsliders ul,
+footer ul,
+#contsliders ol,
+footer ol {
+  padding: 0px;
+}
+#site-navigation .current-menu-item,
+#site-navigation-mobile .current-menu-item,
+#site-navigation .current-page,
+#site-navigation-mobile .current-page,
+#site-navigation .current_page_item,
+#site-navigation-mobile .current_page_item {
+  text-decoration: none;
+  background-color: #eeeeee;
+}
 header#masthead {
   background-color: rgba(255, 255, 255, 0.6);
   background: rgba(255, 255, 255, 0.6);
@@ -437,6 +382,14 @@ header#masthead .wrapper920 #telefono .grande {
         End Habitaciones **************************************************************
         ******************************************************************************/
 
+  /******************************************************************************
+        Maps **************************************************************************
+        ******************************************************************************/
+
+  /******************************************************************************
+        End Maps **********************************************************************
+        ******************************************************************************/
+
 }
 #page #main .slidercontent {
   float: left;
@@ -459,7 +412,8 @@ header#masthead .wrapper920 #telefono .grande {
   margin-bottom: 10px;
 }
 #page #main .edificiocontent img {
-  max-height: 347px;
+  float: left;
+  width: 100%;
 }
 #page #main .fondoblanco {
   clear: both;
@@ -499,6 +453,9 @@ header#masthead .wrapper920 #telefono .grande {
   #page #main .slidercontent,
   #page #main .edificiocontent {
     width: 100%;
+  }
+  #page #main div#generalcontent {
+    margin: 0px 0px 10px 0px!important;
   }
   #page #main #contsliders {
     display: block;
@@ -583,12 +540,6 @@ header#masthead .wrapper920 #telefono .grande {
 #page #main #col2-arts .col2-1-texto {
   margin-bottom: 10px;
 }
-#page #main #col2-arts .col2-1-texto h2 {
-  font-size: 18px;
-  font-weight: bold;
-  text-align: left;
-  line-height: 25px;
-}
 #page #main #col2-arts .cont_hab {
   display: none;
 }
@@ -614,6 +565,35 @@ header#masthead .wrapper920 #telefono .grande {
     width: auto!important;
   }
   #page #main #col2-arts .col2-1-fotos {
+    margin: 0px 10px;
+  }
+}
+#page #main #mapscontent {
+  float: left;
+  width: 61%;
+  -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.75);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.75);
+  margin-bottom: 10px;
+  position: relative;
+}
+#page #main #mapscontent img {
+  float: left;
+  width: 100%;
+}
+#page #main #mapscontent #embedmaps {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+}
+@media (max-width: 767px) {
+  #page #main #mapscontent {
+    width: 100%;
+  }
+  #page #main #contsliders {
+    display: block;
     margin: 0px 10px;
   }
 }
