@@ -50,6 +50,7 @@ while (have_posts()) : the_post();
     <div class="fondoblanco" id="maincontent">
         <div id="cuerpohome-colfull">
             <div id="innercuerpohome-colfull">
+                <h2><?=$post->post_title?></h2>
                 <?= $post->post_content ?>
             </div>
         </div>

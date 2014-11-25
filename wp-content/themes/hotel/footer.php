@@ -36,5 +36,12 @@
 
 <?php wp_footer(); ?>
     </div><!--wrapper-principal-->
+    <script type="text/javascript">
+        $("#site-navigation .wrapper920>div").append('<ul class="nav-menu nav navbar-nav navbar-right" id="menubanderas"></ul>');
+        $("#site-navigation-mobile .wrapper920>div").append('<ul class="nav-menu nav navbar-nav navbar-right" id="menubanderas"></ul>');
+        <?php foreach (wp_get_sites() as $key => $value) {?>
+        $("#menubanderas").append('<li><a href="<?=$value["path"]?>"><span><img src="<?=  get_template_directory_uri()?>/img/hotel-esencia-suites-banderas-<?=$value["blog_id"]?>.png"/></span></a></li>');
+        <?php } ?>
+    </script>
 </body>
 </html>
