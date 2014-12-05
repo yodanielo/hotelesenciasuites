@@ -63,7 +63,37 @@ while (have_posts()) : the_post();
     </div>
     <div class="fondoblanco" id="maincontent">
         <div id="cuadroreserva">
-            <script type="text/javascript" src="http://openhotel.com/apps/hotel.cfm?key=TTlbIjo2ODo7JDoqOiBMKCJXSFMiQUsmOUhGKTJbOi4lTVlZLyVfUUdMP1ooXF0qTFpNO0hDPT4iQFtYOAozRkVJSyA4JClVTS8uIzwvIzNVSU9SL1g9UFAgIAo_EQUAL_"></script>
+            <div id="titleBooking"><strong><?=__("Booking")?>:</strong></div>
+            <div id="todoelscript">
+            <?php
+            global $current_blog;
+            echo "<!-- blogID = " . $current_blog->blog_id . "-->";
+            if ($current_blog->blog_id == 1) {//español
+                ?>
+                <div class="visible-md-block visible-lg-block">
+                    <SCRIPT LANGUAGE="Javascript" TYPE="text/javascript" SRC="http://openhotel.com/apps/hotel.cfm?key=TTlbIjo2ODo7JDoqOiBMKCJXSFMiQUsmOUhGKTJbOi4lTVlZLyVfUUdMP1ooXF0qTFpNI0hDPT4iQFtYOAo1RkVJSyA4JClVTS8uIzwjLTNFSU9TL0g4UVpPKAo_EQUAL_"></SCRIPT>
+                </div>
+                <div class="visible-xs-block visible-sm-block">
+                </div>
+                <?php
+            } else {//ingles
+                ?>
+                <div class="visible-md-block visible-lg-block">
+                    <SCRIPT LANGUAGE="Javascript" TYPE="text/javascript" SRC="http://openhotel.com/apps/hotel.cfm?key=TTlbIjo2ODo7JDoqOiBMKCJXSFMiQUsmOUhGKTJbOi4lTVlZLyVfUUdMP1ooXF0qTFpNO0hDPT4iQFtYOAozRkVJSyA4JClVTS8uIzwvIzNVSU9SL1g9UFAgIAo_EQUAL_"></SCRIPT>
+                </div>
+                <div class="visible-xs-block visible-sm-block">
+                </div>
+                <?php
+            }
+            ?>
+            </div>
+        </div>
+        <div id="cuadrotelefonohome">
+            <?php
+            $casa=get_option("theme_mods_hotel");
+            $casa=$casa["twentytwelve_theme_options"]["text_telefono"];
+            ?>
+            <?= __("Telephone").': <div id="fonoCasaMain">'.$casa."</div>" ?> 
         </div>
         <div id="cuerpohome-col1">
             <div id="innercuerpohome-col1">
@@ -92,8 +122,8 @@ while (have_posts()) : the_post();
 endwhile; // end of the loop. 
 ?>
 <script type="text/javascript">
-    $(function() {
-        $(document).ready(function() {
+    $(function () {
+        $(document).ready(function () {
             settings = {
                 randomStart: true,
                 adaptiveHeight: true,

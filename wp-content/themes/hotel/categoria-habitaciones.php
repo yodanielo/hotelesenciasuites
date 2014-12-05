@@ -26,6 +26,34 @@
             ?>
         </div>
         <div id="col2-arts">
+            <div class="col2-1-reserva fondoblanco">
+                <div id="titleBooking"><strong><?=__("Booking")?>:</strong></div>
+                    <div id="todoelscript">
+                    <?php
+                    global $current_blog;
+                    echo "<!-- blogID = " . $current_blog->blog_id . "-->";
+                    if ($current_blog->blog_id == 1) {//español
+                        ?>
+                        <div class="visible-md-block visible-lg-block">
+                            <SCRIPT LANGUAGE="Javascript" TYPE="text/javascript" SRC="http://openhotel.com/apps/hotel.cfm?key=TTlbIjo2ODo7JDoqOiBMKCJXSFMiQUsmOUhGKTJbOi4lTVlZLyVfUUdMP1ooXF0qTFpNI0hDPT4iQFtYOAo1RkVJSyA4JClVTS8uIzwjLTNFSU9TL0g4UVpPKAo_EQUAL_"></SCRIPT>
+                        </div>
+                        <div class="visible-xs-block visible-sm-block">
+                            <SCRIPT LANGUAGE="Javascript" TYPE="text/javascript" SRC="http://openhotel.com/apps/hotel.cfm?key=TTlbIjo2ODo7JDoqOiBMKCJXSFMiQUsmOUhGKTJbOi4lTVlZLyVfUUdMP1ooXF0qTFpNI0hDPT4iQFtYOAo1RkVJSyA4JClVTS8uIzwjLTNFSU9TL0g4UVpPKAo_EQUAL_"></SCRIPT>
+                        </div>
+                        <?php
+                    } else {//ingles
+                        ?>
+                        <div class="visible-md-block visible-lg-block">
+                            <SCRIPT LANGUAGE="Javascript" TYPE="text/javascript" SRC="http://openhotel.com/apps/hotel.cfm?key=TTlbIjo2ODo7JDoqOiBMKCJXSFMiQUsmOUhGKTJbOi4lTVlZLyVfUUdMP1ooXF0qTFpNO0hDPT4iQFtYOAozRkVJSyA4JClVTS8uIzwvIzNVSU9SL1g9UFAgIAo_EQUAL_"></SCRIPT>
+                        </div>
+                        <div class="visible-xs-block visible-sm-block">
+                            <SCRIPT LANGUAGE="Javascript" TYPE="text/javascript" SRC="http://openhotel.com/apps/hotel.cfm?key=TTlbIjo2ODo7JDoqOiBMKCJXSFMiQUsmOUhGKTJbOi4lTVlZLyVfUUdMP1ooXF0qTFpNI0hDPT4iQFtYOAo1RkVJSyA4JClVTS8uIzwjLTNFSU9TL0g4UVpPKAo_EQUAL_"></SCRIPT>
+                        </div>
+                        <?php
+                    }
+                    ?>
+                    </div>
+            </div>
             <?php
             foreach ($posts as $key => $post) {
                 if (!post_password_required()) {
@@ -58,9 +86,7 @@
                 }
             }
             ?>
-            <div class="col2-1-reserva fondoblanco">
-                <script type="text/javascript" src="http://openhotel.com/apps/hotel.cfm?key=TTlbIjo2ODo7JDoqOiBMKCJXSFMiQUsmOUhGKTJbOi4lTVlZLyVfUUdMP1ooXF0qTFpNO0hDPT4iQFtYOAozRkVJSyA4JClVTS8uIzwvIzNVSU9SL1g9UFAgIAo_EQUAL_"></script>
-            </div>
+            
         </div>
     </div>
 </section>

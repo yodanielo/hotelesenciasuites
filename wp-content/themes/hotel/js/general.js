@@ -295,10 +295,21 @@ $.fn.horaMundial = function (zone,region) {
     actualizar=function(){
         var x=new Date();
         //x.toDateString()
-        $(raiz).html(worldClock(zone, region));
+        $(raiz).html("Lima<br/>"+worldClock(zone, region));
         setTimeout(actualizar,1000);
     };
 
     setTimeout(actualizar,1000);
     //document.getElementById("Atlanta").innerHTML = worldClock(-5, "NAmerica");
 };
+
+$(function(){
+    urlSitio=$("#linkHome").attr("href");
+    //urlFacebook="//www.facebook.com/plugins/like.php?href=" + encodeURIComponent(urlSitio) + "&amp;width=75&amp;layout=box_count&amp;action=like&amp;show_faces=false&amp;share=false&amp;height=65&amp;width=100&amp;appId=116093971902897";
+    urlFacebook="//www.facebook.com/plugins/like.php?href=" + encodeURIComponent(urlSitio) + "&amp;width=75&amp;layout=box_count&amp;action=like&amp;show_faces=false&amp;share=false&amp;height=65&amp;appId=116093971902897";
+    $("#iframeFacebook").html('<iframe src="'+urlFacebook+'" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:75px; height:65px;" allowTransparency="true"></iframe>');
+    
+    
+    //generado    -> //www.facebook.com/plugins/like.php?href=http%3A%2F%2Fesenciasuites.zz.mu%2F&amp;width=75&amp;layout=box_count&amp;action=like&amp;show_faces=false&amp;share=false&amp;height=65&amp;appId=116093971902897
+    //original    -> //www.facebook.com/plugins/like.php?href=http%3A%2F%2Fesenciasuites.zz.mu%2F&amp;width=75&amp;layout=box_count&amp;action=like&amp;show_faces=false&amp;share=false&amp;height=65&amp;appId=116093971902897
+})

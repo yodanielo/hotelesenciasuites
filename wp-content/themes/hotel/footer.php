@@ -11,8 +11,9 @@
 ?>
 	</div><!-- #main .wrapper -->
         <?php
-        $direccion=get_option("theme_mods_hotel");
-        $direccion=$direccion["twentytwelve_theme_options"]["text_direccion"];
+        $opciones=get_option("theme_mods_hotel");
+        $direccion=$opciones["twentytwelve_theme_options"]["text_direccion"];
+        $telefono=$opciones["twentytwelve_theme_options"]["text_telefono"];
 
         $imagenlogo=get_option("twentytwelve_theme_options");
         $imagenlogo=$imagenlogo["image_logo_footer"];
@@ -23,6 +24,7 @@
             </div>
             <div id="col2-menu">
                 <?php wp_nav_menu(array('theme_location' => 'secondary')); ?>
+                <div id="telefonoFooter"><?= __("Telephone").":<br/>".$telefono ?> </div>
             </div>
             <div id="col3-menu">
                 <?= str_replace("\n", "<br/>", $direccion)?>
@@ -37,11 +39,23 @@
 <?php wp_footer(); ?>
     </div><!--wrapper-principal-->
     <script type="text/javascript">
+        //web
         $("#site-navigation .wrapper920>div").append('<ul class="nav-menu nav navbar-nav navbar-right" id="menubanderas"></ul>');
-        $("#site-navigation-mobile .wrapper920>div").append('<ul class="nav-menu nav navbar-nav navbar-right" id="menubanderas"></ul>');
+        //mobile
+        $("#site-navigation-mobile #menu-menu_primario").append('<li class="ico_mobile_flag"></li>');
         <?php foreach (wp_get_sites() as $key => $value) {?>
         $("#menubanderas").append('<li><a href="<?=$value["path"]?>"><span><img src="<?=  get_template_directory_uri()?>/img/hotel-esencia-suites-banderas-<?=$value["blog_id"]?>.png"/></span></a></li>');
+        $(".ico_mobile_flag").append('<a href="<?=$value["path"]?>"><span><img src="<?=  get_template_directory_uri()?>/img/hotel-esencia-suites-banderas-<?=$value["blog_id"]?>.png"/></span></a>');
         <?php } ?>
+    </script>
+    <script type="text/javascript">
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-57242293-1', 'auto');
+          ga('send', 'pageview');
     </script>
 </body>
 </html>

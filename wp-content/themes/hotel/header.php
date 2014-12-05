@@ -33,35 +33,34 @@
             <header id="masthead" class="site-header" role="banner">
                 <div class="wrapper920">
                     <?php if (get_header_image()) : ?>
-                        <a href="<?php echo esc_url(home_url('/')); ?>"><img src="<?php header_image(); ?>" title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?> - <?php bloginfo('description'); ?>" class="header-image" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="" /></a>
+                        <a id="linkHome" href="<?php echo esc_url(home_url('/')); ?>"><img src="<?php header_image(); ?>" title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?> - <?php bloginfo('description'); ?>" class="header-image" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="" /></a>
                     <?php endif; ?>
                     <div class="navbar-header visible-xs-block pull-right">
                         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#site-navigation-mobile">
-                          <span class="sr-only">Toggle navigation</span>
-                          <span class="icon-bar"></span>
-                          <span class="icon-bar"></span>
-                          <span class="icon-bar"></span>
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
                         </button>
-                      </div>
-                    <div id="telefono">
-                        <div class="chiquito"><?= __("Telephone") ?>:</div>
-                        <div class="grande">(123) 415 789</div>
+                    </div>
+                    <div id="redesSociales">
+                        <div id="iframeFacebook"></div>
                     </div>
                 </div>
 
                 <nav id="site-navigation-mobile" class="main-navigation visible-xs-block collapse" role="navigation" style="height:0px;" aria-expanded="false">
                     <div class="wrapper920">
                         <!--<button class="menu-toggle"><?php _e('Menu', 'twentytwelve'); ?></button>-->
-                        <?php wp_nav_menu(array('theme_location' => 'primary', 'menu_class' => 'nav-menu nav navbar-nav')); ?>
+<?php wp_nav_menu(array('theme_location' => 'primary', 'menu_class' => 'nav-menu nav navbar-nav')); ?>
                     </div>
                 </nav><!-- #site-navigation -->
-                
+
             </header><!-- #masthead -->
 
             <nav id="site-navigation" class="main-navigation hidden-xs" role="navigation">
                 <div class="wrapper920">
                     <!--<button class="menu-toggle"><?php _e('Menu', 'twentytwelve'); ?></button>-->
-                    <?php wp_nav_menu(array('theme_location' => 'primary', 'menu_class' => 'nav-menu nav navbar-nav')); ?>
+<?php wp_nav_menu(array('theme_location' => 'primary', 'menu_class' => 'nav-menu nav navbar-nav')); ?>
                 </div>
             </nav><!-- #site-navigation -->
 

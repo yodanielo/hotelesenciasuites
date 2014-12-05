@@ -307,6 +307,15 @@ header#masthead{
                 line-height: 60px;
             }
         }
+        #redesSociales{
+            float:right;
+            #iframeFacebook{
+                float: left;
+                margin-top: 20px;
+                overflow: hidden;
+                height: 80px;
+            }
+        }
         @media (max-width:767px){
             .header-image{
                 position: relative;
@@ -349,6 +358,9 @@ header#masthead{
 }
 #site-navigation-mobile{
     .bw-rgba(255,255,255,0);
+    .ico_mobile_flag a{
+        display:inline-block;
+    }
 }
 
 #page{
@@ -387,7 +399,18 @@ header#masthead{
             .drop-shadow(5px, 5px, 5px, 0.75);
 
         }
-
+        #todoelscript {
+            display: inline-block!important;
+        }
+        #titleBooking{
+            font-size: 20px; text-align: center; padding: 0px 0px 10px 0px;
+        }
+        #cuadroreserva{
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+        }
         #cuerpohome-col1{
             float:left;
             width:50%;
@@ -407,11 +430,21 @@ header#masthead{
             float:left;
             width:20%;
             text-align:center;
-            padding-top: 50px;
+            padding-top: 30px;
             font-weight: bold;
             #climalocal {
                 display: inline-block;
             }
+        }
+        div#cuadrotelefonohome {
+            font-size: 40px;
+            font-style: italic;
+            line-height: 40px;
+            line-height: 60px;
+            text-align: center;
+        }
+        #fonoCasaMain{
+            display:inline-block;
         }
         @media (max-width:767px){
             .slidercontent,
@@ -434,6 +467,9 @@ header#masthead{
                 float:none;
                 clear:both;
                 width:auto;
+            }
+            #fonoCasaMain{
+                display: block;
             }
         }
         /******************************************************************************
@@ -494,14 +530,15 @@ header#masthead{
                 .drop-shadow(5px, 5px, 5px, 0.75);
             }
             .col2-1-texto{
-                margin-bottom: 10px;
+                margin-bottom: 0px;
             }
             .cont_hab{
                 display:none;
             }
         }
-        #col2-1-reserva{
-            margin: 10px 10px 0px 10px;
+        .col2-1-reserva{
+            margin: 0px 0px 10px 0px;
+            text-align: center;
         }
 
         @media (max-width:767px){
@@ -526,6 +563,9 @@ header#masthead{
                 .col2-1-fotos {
                     margin: 0px 10px;
                 }
+            }
+            .col2-1-reserva{
+                margin: 0px 10px 10px 10px!important;
             }
         }
 
@@ -586,6 +626,10 @@ header#masthead{
             a{
                 color:#f3f3f3;
             }
+            #telefonoFooter{
+                text-align: left;
+                font-weight: bold;
+            }
         }
         #col4-menu{
             text-align: center;
@@ -621,6 +665,9 @@ header#masthead{
         }
         #colophon a{
             text-decoration:underline;
+        }
+        #telefonoFooter{
+            text-align: center!important;
         }
     }
     /******************************************************************************

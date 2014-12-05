@@ -502,6 +502,21 @@ function twentytwelve_customize_register( $wp_customize ) {
             'type'    => 'textarea',
         ));
         /**********************************************************************/
+        /*Teléfono ************************************************************/
+        /**********************************************************************/
+        $wp_customize->add_setting('twentytwelve_theme_options[text_telefono]', array(
+            'default'        => '',
+            'capability'     => 'edit_theme_options',
+
+        ));
+
+        $wp_customize->add_control('twentytwelve_text_telefono', array(
+            'label'      => __('Teléfono', 'themename'),
+            'section'    => 'twentytwelve_Settings',
+            'settings'   => 'twentytwelve_theme_options[text_telefono]',
+            'type'    => 'text',
+        ));
+        /**********************************************************************/
         /*Dirección Maps*******************************************************/
         /**********************************************************************/
         $wp_customize->add_setting('twentytwelve_theme_options[text_direccion_maps]', array(
@@ -531,6 +546,33 @@ function twentytwelve_customize_register( $wp_customize ) {
             'section'  => 'twentytwelve_Settings',
             'settings' => 'twentytwelve_theme_options[image_logo_footer]',
         )));
+        
+        /**********************************************************************/
+        /*Redes Sociales ******************************************************/
+        /**********************************************************************/
+        $wp_customize->add_section("twentytwelve_Social", array(
+            "title"=>"Like en Redes Sociales",
+            "priority"=>1,
+        ));
+        
+        /**********************************************************************/
+        /*Facebook ************************************************************/
+        /**********************************************************************/
+        /*
+        $wp_customize->add_setting('twentytwelve_theme_social[text_facebook]', array(
+            'default'        => '',
+            'capability'     => 'edit_theme_options',
+
+        ));
+
+        $wp_customize->add_control('social_text_telefono', array(
+            'label'      => __('ID de Facebook', 'themename'),
+            'section'    => 'twentytwelve_Social',
+            'settings'   => 'twentytwelve_theme_social[text_facebook]',
+            'type'    => 'text',
+        ));
+        */
+        
 }
 add_action( 'customize_register', 'twentytwelve_customize_register' );
 

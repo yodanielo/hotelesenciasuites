@@ -28,7 +28,7 @@ get_header();
     }
     else{
         switch ($cat){
-            case 3://rooms
+            case 2://rooms
                 include 'categoria-habitaciones.php';
                 break;
             default:
@@ -36,5 +36,5 @@ get_header();
         }
     }
 
-get_sidebar(); ?>
+?>
 <?php get_footer(); ?>
